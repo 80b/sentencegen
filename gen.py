@@ -9,12 +9,12 @@ print("""
 [2] Gen sentences
 """)
 yes = int(input('Which option?: '))
+amount = int(input("How many sentences do you want to gen?: "))
 nouns = ("puppy", "car", "rabbit", "girl", "monkey")
 verbs = ("runs", "hits", "jumps", "drives", "barfs") 
 adv = ("crazily.", "dutifully.", "foolishly.", "merrily.", "occasionally.")
 adj = ("adorable", "clueless", "dirty", "odd", "stupid")
-while yes != 1:
-	if yes == 2:
-		print("%s %s %s %s"%(random.choice(nouns), random.choice(verbs), random.choice(adv), random.choice(adj)))	
+for i in range(amount+1):
+	print("%s %s %s %s"%(random.choice(nouns), random.choice(verbs), random.choice(adv), random.choice(adj)))	
 
 print('Exiting..')
